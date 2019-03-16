@@ -11,7 +11,7 @@ const multer = require('multer');
 
 // ROUTES
 const authRoute = require('./routes/auth.route');
-
+const recipesRoute = require('./routes/recipe.route'); 
 //------------------------------
 // APP INIT
 //------------------------------
@@ -45,6 +45,7 @@ app.use((req, res, next) =>{
 // ROUTES
 //------------------------------
 app.use('/auth', authRoute);
+app.use('/recipes', recipesRoute); 
 
 //------------------------------
 // ERRORS MANAGEMENT
