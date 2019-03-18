@@ -1,20 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
     <button @click="login()">Login</button>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="logout()">Logout</button>
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+
 import axios from "axios";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+
   },
   data() {
     return {
@@ -40,6 +40,12 @@ export default {
           console.log(user);
           console.log(err);
         });
+    },
+    logout(){
+      if(localStorage.token){
+        localStorage.token = '';
+        console.log('logout');
+      }
     }
   },
   mounted() {
