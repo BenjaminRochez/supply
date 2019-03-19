@@ -9,7 +9,13 @@ const recipeSchema = new Schema({
   creator: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  }
+  },
+  ingredients: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Ingredient'
+    }
+  ]
 });
 
 module.exports = mongoose.model('Recipe', recipeSchema);

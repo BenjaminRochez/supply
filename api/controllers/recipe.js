@@ -1,5 +1,5 @@
-const Recipe = require('../models/recipe.model');
-const User = require('../models/user.model');
+const Recipe = require('../models/recipe');
+const User = require('../models/user');
 
 const { validationResult } = require('express-validator/check');
 

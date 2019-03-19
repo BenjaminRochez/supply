@@ -14,14 +14,16 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  status: {
-    type: String,
-    default: 'I am new!'
-  },
   recipes: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Recipe'
+    }
+  ],
+  ingredients: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Ingredient'
     }
   ]
 });
