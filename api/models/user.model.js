@@ -18,10 +18,10 @@ const userSchema = new Schema({
     type: String,
     default: 'I am new!'
   },
-  posts: [
+  recipes: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Post'
+      ref: 'Recipe'
     }
   ]
 });

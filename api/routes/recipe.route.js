@@ -8,5 +8,7 @@ const router = express.Router();
 // GET /recipes/all
 router.get('/posts', isAuth, recipeController.getRecipes);
 
+
+router.post('/create', isAuth, recipeController.createRecipe);
 module.exports = router;
  
